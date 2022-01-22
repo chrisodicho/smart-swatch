@@ -32,4 +32,4 @@ npx smart-swatch "#C70833"
 
 ---
 
-Inspired by (smart-swatch)[https://github.com/ivan-dalmet/smart-swatch]. Special thanks to [Ivan Dalmet](https://ivan.dalmet.fr/) ❤️
+Inspired by [smart-swatch](https://github.com/ivan-dalmet/smart-swatch). Special thanks to [Ivan Dalmet](https://ivan.dalmet.fr/) ❤️
