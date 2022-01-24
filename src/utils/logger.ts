@@ -19,8 +19,8 @@ export function setupLogger(options: Options): void {
   const logLevel: LogLevel = options.debug ? LogLevel.DEBUG : LogLevel.INFO;
 
   configure({
-    appenders: { console: { type: 'console' }, file: { type: 'file', filename: 'smart-swatch.log' } },
-    categories: { default: { appenders: ['console', 'file'], level: logLevel } },
+    appenders: { console: { type: 'console' } },
+    categories: { default: { appenders: ['console'], level: logLevel } },
   });
   setAllLogLevels(logLevel);
 }
