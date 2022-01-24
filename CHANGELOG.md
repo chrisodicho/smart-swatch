@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/chrisodicho/smart-swatch/compare/v1.0.0...v1.1.0) (2022-01-24)
+
+
+### Features
+
+* remove file logger ([0e38a88](https://github.com/chrisodicho/smart-swatch/commit/0e38a882d5345bd2d103ec92c1528653d766375a))
+
 # 1.0.0 (2022-01-22)
 
 
