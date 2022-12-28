@@ -1,7 +1,7 @@
 {
   "name": "smart-swatch",
   "version": "1.0.0",
-  "description": "Node tool to scrape and transform articles for local reading",
+  "description": "Node tool to generate a palette of colors from a single one",
   "main": "lib/index.js",
   "bin": {
     "smart-swatch": "bin/smart-swatch"
