@@ -1,32 +1,31 @@
-import { Loggers, LogLevel, Options } from '@/types';
-import { configure, getLogger, shutdown } from 'log4js';
+import { LogLevel, Options } from '@/types';
+import winston from 'winston';
+
+const transports = process.env.NODE_ENV === 'test' && !process.env.LOG_LEVEL ? [] : [new winston.transports.Console()];
+
+function createWinstonLogger(service: string) {
+  return winston.createLogger({
+    format: winston.format.simple(),
+    defaultMeta: { service },
+    transports,
+  });
+}
 
 export const logger = {
-  app: getLogger('app'),
-  enhancer: getLogger('enhancer'),
-  scraper: getLogger('scraper'),
-  utils: getLogger('utils'),
+  app: createWinstonLogger('app'),
+  enhancer: createWinstonLogger('enhancer'),
+  scraper: createWinstonLogger('scraper'),
+  utils: createWinstonLogger('utils'),
 };
-
-if (process.env.NODE_ENV === 'test' && !process.env.LOG_LEVEL) {
-  shutdown();
-} else {
-  const logLevel = (process.env.LOG_LEVEL as LogLevel) || LogLevel.INFO;
-  setAllLogLevels(logLevel);
-}
 
 export function setupLogger(options: Options): void {
   const logLevel: LogLevel = options.debug ? LogLevel.DEBUG : LogLevel.INFO;
 
-  configure({
-    appenders: { console: { type: 'console' } },
-    categories: { default: { appenders: ['console'], level: logLevel } },
-  });
   setAllLogLevels(logLevel);
 }
 
 function setAllLogLevels(logLevel: LogLevel) {
-  Object.values(Loggers).forEach((type) => {
-    logger[type].level = logLevel;
+  Object.values(logger).forEach((value: winston.Logger) => {
+    value.level = logLevel;
   });
 }
