@@ -1,3 +1,11 @@
+## [1.1.1](https://github.com/chrisodicho/smart-swatch/compare/v1.1.0...v1.1.1) (2023-01-01)
+
+
+### Bug Fixes
+
+* bump version to update description on npm ([6e96028](https://github.com/chrisodicho/smart-swatch/commit/6e960286edcce00b05bb3b67ee12fa4d1692e69e))
+* update github workflow to use node 18 ([85fd64c](https://github.com/chrisodicho/smart-swatch/commit/85fd64cdc42b0d380f76fc6ed9f77bd0b46832fb))
+
 # [1.1.0](https://github.com/chrisodicho/smart-swatch/compare/v1.0.0...v1.1.0) (2022-01-24)
 
 
