@@ -1,4 +1,4 @@
-# Smart Swatch CLI ![production](https://github.com/chrisodicho/smart-swatch/actions/workflows/prod.workflow.yml/badge.svg)
+# Smart Swatch CLI ![production](https://github.com/chrisodicho/smart-swatch/actions/workflows/prod.workflow.yml/badge.svg) [![npm version](https://badge.fury.io/js/smart-swatch.svg)](https://badge.fury.io/js/smart-swatch)
 
 The purpose of this library is to implement the color palette generation used in [smart-swatch](https://smart-swatch.netlify.app/) as a node CLI tool.
 
